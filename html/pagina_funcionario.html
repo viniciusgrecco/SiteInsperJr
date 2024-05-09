@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página do Funcionário</title>
+<link rel="stylesheet" href="../css/pagina_funcionario.css">
+<script src="../java/pagina_funcionario.js"></script>
+</head>
+<body>
+
+<div class="header">
+    <div class="central-container">
+        <img src="../img/logo-tania.png" alt="Logo da Clínica" class="logo">
+        <div class="container-doutora">
+            <p class="welcome-message">Doutora Tânia</p>
+        </div>
+    </div>
+    <div class="logout-container">
+        <a href="pagina_login.html" class="logout-button">LOG OUT</a>
+    </div>
+</div>
+
+<div class="content-container">
+    <div class="transparent-box">
+        <p class="box-title">PRÓXIMAS CONSULTAS</p>
+        <div class="consultas-box">
+            <p class="box-date-time">
+                <span class="event-title">17/05 - Tratamento de Acne</span>
+                <span class="event-time">09h30</span>
+            </p>
+            <p class="box-detail">Paciente Ana Cláudia</p>
+            <p class="box-detail">-Alérgica a Azelan</p>
+            <div class="add-notice-button" onclick="transformToInput(this)">ADICIONAR AVISO</div>
+        </div>
+
+        <div class="consultas-box">
+            <p class="box-date-time">
+                <span class="event-title">20/05 - Botox</span>
+                <span class="event-time">11h30</span>
+            </p>
+            <p class="box-detail">Paciente Gabriela Tavares</p>
+            <p class="box-detail">-Primeira Consulta</p>
+            <div class="add-notice-button" onclick="transformToInput(this)">ADICIONAR AVISO</div>
+
+        </div>
+        <div class="consultas-box">
+            <p class="box-date-time">
+                <span class="event-title">23/05 - Preechimento Facial</span>
+                <span class="event-time">18h30</span>
+            </p>
+            <p class="box-detail">Paciente João Almeida</p>
+            <p class="box-detail">-Realizei preenchimento errado e pretendo arrumar</p>
+            <div class="add-notice-button" onclick="transformToInput(this)">ADICIONAR AVISO</div>
+        </div>
+    </div>
+    <div class="transparent-box">
+        <p class="box-title">TO-DO-LIST</p>
+        <div class="todolist-box">
+            <ul class="todo-list">
+                <li class="todo-item">
+                    Pesquisar outros produtos para Acne da Ana Cláudia
+                    <div class="check-box"></div>
+                </li>
+                <li class="todo-item">
+                    Mandar mensagem para Henrique desejando boas-vindas
+                    <div class="check-box"></div>
+                </li>
+                <li class="todo-item">
+                    Estudar caso de João
+                    <div class="check-box"></div>
+                </li>    
+            </ul>
+            <div class="button-container">
+                <button class="add-task-button" onclick="transformToInput(this)">ADICIONAR TAREFA</button>
+            </div>
+            
+        </div>
+    </div>
+    <div class="transparent-box">
+        <p class="box-title">NEWSLETTER</p>
+        <div class="newsletter-box">
+            <div class="newsletter-inner-container">
+                <form class="newsletter-form">
+                    <label for="newsletter-title" class="newsletter-label">Adicione um Título</label>
+                    <input type="text" id="newsletter-title" name="newsletter-title" placeholder="Título" class="newsletter-input">
+        
+                    <label for="newsletter-content" class="newsletter-label">Content</label>
+                    <textarea id="newsletter-content" name="newsletter-content" rows="4" placeholder="Escreva aqui..." class="newsletter-textarea"></textarea>
+        
+                    <button type="submit" class="newsletter-submit-button">Publicar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

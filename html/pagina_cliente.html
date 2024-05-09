@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página Cliente</title>
+<link rel="stylesheet" href="../css/pagina_cliente.css">
+<script src="../java/pagina_cliente.js"></script>
+</head>
+<body>
+
+<div class="logo-container"><img src="../img/logo-tania.png" alt="Logo"></div>
+<div class="logout-container">
+  <a href="pagina_login.html" class="logout-button">LOG OUT</a>
+</div>
+<div class="transparent-box top-left">
+  <p class="welcome-message">Bem-Vinda, Ana!</p>
+</div>
+
+<div class="transparent-box bottom-left">
+  <p class="uppercase">AGENDE UMA CONSULTA</p>
+  <div class="appointment-container">
+    <div id="calendar"></div>
+    <div class="booking-container">
+      <div class="procedure-selection">
+        <label for="procedure">Procedimento</label>
+        <select id="procedure">
+          <option value="">Selecione aqui</option>
+          <option value="botox">Botox</option>
+          <option value="filler">Preenchimento Facial</option>
+          <option value="filler">Preenchimento Labial</option>
+          <option value="pintas">Remoção de pintas</option>
+          <option value="limpezapele">Depilação a Laser</option>
+          <option value="acne">Tratamento de acne</option>
+          <option value="acne">Tratamento de Pele</option>
+          <option value="acne">Peeling</option>
+          <option value="acne">Bioestimulador</option>
+          <option value="acne">Contorno Facial</option>
+          <option value="acne">Rejuvenescimento Facial</option>
+          <option value="acne">Tratamento de Flacidez</option>
+        </select>
+      </div>
+      <div class="time-selection">
+        <label for="time">Horário</label>
+        <select id="time">
+          <option value="">Selecione aqui</option>
+          <option value="08:30">08h30</option>
+          <option value="09:30">09h30</option>
+          <option value="10:30">10h30</option>
+          <option value="11:30">11h30</option>
+          <option value="12:30">12h30</option>
+          <option value="13:30">13h30</option>
+          <option value="14:30">14h30</option>
+          <option value="17:30">17h30</option>
+          <option value="18:30">18h30</option>
+        </select>
+      </div>
+      <button id="confirmButton" class="confirm-button">AGENDAR</button>
+    </div>
+  </div>
+</div>
+
+<div class="transparent-box bottom-right">
+  <p class="uppercase">AVISOS</p>
+  <div class="linha-preta"></div>
+  <p class="avisos-texto">- Passar ácido salicílico antes de dormir</p>
+</div>
+<div class="transparent-box top-right">
+  <p class="uppercase">MEUS AGENDAMENTOS</p>
+  <div class="box-agendamento">
+    <p class="box-date-time">
+        <span class="event-title">17/05 - Tratamento de Acne</span>
+        <span class="event-time">09h30</span>
+    </p>
+    <p class="box-detail">Doutora Tânia</p>
+    <p class="box-detail">-Av.Rebouças,576</p>
+    <div class="remarcar-button" onclick="redirectToWhatsApp()">REMARCAR</div>
+    <div class="add-notice-button" onclick="transformToInput(this)">OBSERVAÇÃO</div>
+</div>
+</div>
+
+</body>
+</html>

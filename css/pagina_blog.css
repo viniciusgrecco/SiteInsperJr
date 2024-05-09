@@ -1,0 +1,141 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #EDEDED;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo-container img {
+    width: 50px; /* Adjust the size as needed */
+    height: auto;
+    border-radius: 50%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #000;
+}
+
+.login-button {
+    padding: 10px 20px;
+    background-color: #68B8CE;
+    border-radius: 5px;
+}
+
+.login-button a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.login-button:hover {
+    background-color: #57a1bc; /* Slightly darker for hover effect */
+}
+
+main {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 200px;
+}
+
+section {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+section h2 {
+    font-size: 1.5em; /* Adapta-se com base no tamanho da tela usando 'em' */
+    color: #68B8CE;
+    margin-bottom: 10px;
+}
+
+.highlight-box1, .highlight-box2 {
+    background-color: rgba(45, 181, 179, 0.5);
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    padding: 1em; /* Espaçamento interno baseado em 'em' para ser responsivo */
+    box-sizing: border-box;
+}
+
+.highlight-box1 h3, .highlight-box2 h3 {
+    font-size: 1.7em; /* Responsivo para a largura do box */
+    font-weight:bolder;
+    margin-top: 1px;
+    color: black;
+}
+
+.highlight-box1 p, .highlight-box2 p {
+    font-size: 1em; /* Responsivo para a largura do box */
+    margin-top: 0.5px;
+}
+
+.highlight-box1 {
+    height: 200px;
+}
+
+.highlight-box2 {
+    height: 160px;
+}
+
+/* Consultas de Mídia para Responsividade */
+@media (max-width: 768px) {
+
+
+    header nav ul {
+        flex-direction: column; /* Alinha os links verticalmente */
+        align-items: center;
+    }
+
+    main {
+        width: 95%;
+        margin-left: 10px;
+    }
+
+    .highlight-box1 {
+        height: 200px;
+    }
+
+    .highlight-box2 {
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1, section h2, .highlight-box1 h3, .highlight-box2 h3, .highlight-box1 p, .highlight-box2 p {
+        font-size: 0.75em; /* Redução adicional do tamanho da fonte para telas muito pequenas */
+    }
+
+    .highlight-box1, .highlight-box2 {
+        border-radius: 10px;
+        margin-bottom: 5px;
+    }
+}

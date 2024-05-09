@@ -1,0 +1,162 @@
+body {
+    background-image: url('../img/login_fundo25.png');
+    background-size: cover;
+    background-position: center center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.logo-container {
+    position: fixed; /* Alterado de absolute para fixed */
+    top: 10px; /* Posiciona o logo no topo da página */
+    left: 50%; /* Centraliza o logo horizontalmente */
+    transform: translateX(-50%); /* Ajuste fino para centralização exata */
+    z-index: 1000; /* Mantém o logo acima de outros elementos */
+}
+
+.logo-container img {
+    width: 100px; /* Define uma largura fixa para maior controle */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 50%;
+}
+
+.logo-container a {
+    text-decoration: none; /* Remove qualquer sublinhado */
+    display: inline-block; /* Trata o link como um bloco inline */
+    outline: none; /* Remove o contorno ao focar */
+}
+
+/* Restante do CSS mantido */
+
+
+
+.login-container {
+    width: 40%; /* Ajuste para a largura desejada */
+    background: rgba(255, 255, 255, 0.7); /* Aumento da transparência */
+    padding: 20px;
+    border-radius: 45px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-top: 50px; /* Ajuste conforme necessário para o posicionamento vertical */
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    width: 80%; /* Ajusta a largura do grupo de entrada para ser menor */
+    margin: 0 auto 10px; /* Centraliza o grupo e adiciona margem inferior */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #333;
+    align-self: flex-start;
+    margin-bottom: 5px;
+}
+
+.input-group input[type="text"],
+.input-group input[type="password"] {
+    width: 100%; /* Ajuste para que o input ocupe a largura do .input-group */
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #68BBCE;
+    color: white;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+.form-group button:hover {
+    background-color: #5caeb4;
+}
+
+.login-options {
+    width: 80%; /* Alinhado com a largura do input-group */
+   display: flex;
+   flex-direction: column; /* Empilha os elementos verticalmente */
+  align-items: center; /* Centraliza os links verticalmente */
+  margin-top: 10px;
+}
+
+.login-options a {
+    color: #68BBCE;
+  text-decoration: none;
+  padding: 5px 0; /* Adiciona espaço vertical entre os links */
+}
+
+.login-switch {
+    width: 80%; /* Correspondência com a largura dos .input-group */
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.login-switch button {
+    width: calc(50% - 20px); /* Ajuste para manter os botões do mesmo tamanho */
+    margin: 0 10px;
+    padding: 10px 0;
+    border: 2px solid #68BBCE;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: transparent;
+    color: #68BBCE;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.login-switch button:hover {
+    background-color: #68BBCE;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        width: 60%; /* Aumento para telas menores */
+    }
+
+    .input-group,
+    .login-options,
+    .login-switch {
+        width: 90%; /* Ajuste para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        width: 80%; /* Aumento para telas muito pequenas */
+    }
+
+    .input-group,
+    .login-options,
+    .login-switch {
+        width: 95%; /* Ajuste para telas muito pequenas */
+    }
+}

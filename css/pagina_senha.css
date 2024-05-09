@@ -1,0 +1,110 @@
+body {
+    background-image: url('../img/login_fundo25.png');
+    background-size: cover;
+    background-position: center center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.logo-container {
+    position: fixed; /* Alterado de absolute para fixed */
+    top: 10px; /* Posiciona o logo no topo da página */
+    left: 50%; /* Centraliza o logo horizontalmente */
+    transform: translateX(-50%); /* Ajuste fino para centralização exata */
+    z-index: 1000; /* Mantém o logo acima de outros elementos */
+}
+
+.logo-container img {
+    width: 100px; /* Define uma largura fixa para maior controle */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 50%;
+}
+
+.logo-container a {
+    text-decoration: none; /* Remove qualquer sublinhado */
+    display: inline-block; /* Trata o link como um bloco inline */
+    outline: none; /* Remove o contorno ao focar */
+}
+
+/* Restante do CSS mantido */
+
+
+.redefinir-senha-container {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 45px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px; /* Largura ajustada para corresponder às outras páginas */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px; /* Margem ajustada para posicionar a caixa verticalmente */
+}
+
+.titulo-container {
+    text-align: center;
+    width: 100%;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+}
+
+.button-container button {
+    padding: 10px 20px; /* Padding ajustado para tamanho consistente do botão */
+    border: none;
+    border-radius: 5px;
+    background-color: #68BBCE;
+    color: white;
+    cursor: pointer;
+}
+
+.button-container button:hover {
+    background-color: #57a1b0;
+}
+
+/* Ajustes de responsividade */
+@media (max-width: 768px) {
+    .redefinir-senha-container {
+        width: 80%; /* Consistente com outras páginas */
+        margin-top: 30px; /* Ajuste de margem para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .redefinir-senha-container {
+        width: 95%; /* Consistente com outras páginas */
+        margin-top: 20px; /* Ajuste de margem para telas muito pequenas */
+    }
+}

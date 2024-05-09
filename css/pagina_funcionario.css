@@ -1,0 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background: url('../img/cliente_fundo23.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative; /* Faz o cabeçalho ficar fixo no topo da página */
+    top: 0; /* Posiciona no topo da página */
+    padding: 10px 0; /* Adiciona padding vertical para espaço */
+    
+}
+
+.central-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Garante que o container use toda a largura possível */
+}
+
+.logo {
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px; /* Espaço entre o logo e o container */
+}
+
+.container-doutora {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    padding: 10px;
+    width: auto;
+}
+
+.logout-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+}
+
+.logout-button {
+    background-color: #68B8CE;
+    color: black;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.logout-button:hover {
+    background-color: #57a1bc;
+    cursor: pointer;
+}
+
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px; /* Ajuste este valor conforme a altura do seu cabeçalho */
+    padding: 20px;
+}
+
+.transparent-box {
+    width: 30%; /* Largura de cada caixa */
+    height: 700px; /* Altura de cada caixa */
+    background-color: rgba(255, 255, 255, 0.4); /* Cor semi-transparente */
+    margin: 10px;
+    border-radius: 15px; /* Borda arredondada */
+}
+
+.box-title {
+    text-align: center;
+    width: 100%;
+    font-size: 1.5em; /* Adjust font size as necessary */
+    padding: 20px 0; /* Padding for spacing from the top of the box */
+    margin-bottom: 20px; /* Space between the title and other contents of the box */
+    font-weight: bold;
+}
+
+.consultas-box {
+    background-color: rgba(82, 146, 178, 0.7); /* The specified blue color */
+    height: 150px; /* Adjust the height as needed */
+    margin: 30px 20px; /* Spacing around the boxes */
+    border-radius: 15px; /* Rounded corners */
+    padding:20px;
+    font-weight: bold;
+    font-size: 0.9em;
+    overflow-y: auto; /* Adiciona scroll se o conteúdo for muito longo */
+    word-wrap: break-word; /* Quebra palavras longas para evitar estouro */
+    position: relative; /* Essencial para posicionar o botão */
+    overflow: hidden; /* Mantém tudo dentro da caixa */
+    padding-bottom: 40px;
+}
+
+.todolist-box {
+    background-color: rgba(82, 146, 178, 0.7);
+    margin: 10px 20px;
+    border-radius: 15px;
+    padding: 20px;
+    height: auto;
+    overflow: auto;
+}
+
+.todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Remove margin to align content properly */
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    position: relative; /* Required for pseudo-element positioning */
+    margin-bottom: 10px;
+    color: black; /* Text color changed to black */
+    font-size: 0.9em;
+    padding-left: 10px; /* Space for bullet */
+}
+
+.todo-item::before {
+    content: '';
+    position: absolute;
+    left: 0; /* Position the bullet at the start of the item */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%);
+    width: 5px;
+    height: 5px;
+    background-color: black; /* Bullet color */
+    border-radius: 50%; /* Make it round */
+}
+
+.check-box {
+    width: 20px;
+    height: 20px;
+    border: 2px solid black; /* Changed to black to match the text color */
+    border-radius: 4px;
+    margin-left: auto; /* Push to the right */
+}
+
+.add-task-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #70c1b3;
+    color: black;
+}
+.button-container {
+    width: 100%; /* Usa a largura total da 'todolist-box' */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    margin-top: 20px; /* Espaço acima do botão */
+}
+
+
+
+.newsletter-box {
+    background-color: rgba(82, 146, 178, 0.7);
+    margin: 10px 20px;
+    border-radius: 15px;
+    padding: 20px;
+    height: 400px; /* Default height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletter-inner-container {
+    width: 90%; /* Adjust width to fit container */
+    height: 250px;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box; /* Include padding and border in the element's width */
+}
+
+.newsletter-label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    color: #333333;
+}
+
+.newsletter-input,
+.newsletter-textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #CCCCCC;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.newsletter-submit-button {
+    background-color: #68B8CE;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.newsletter-submit-button:hover {
+    background-color: #57a1bc;
+}
+
+
+.box-date-time {
+    display: flex;
+    justify-content: space-between; /* Alinha um item à esquerda e outro à direita */
+    font-weight: bold;
+    margin-bottom: 5px;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.box-date-time::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: black;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Posiciona a linha abaixo do texto */
+}
+
+.box-detail {
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
+
+.add-notice-button {
+    background-color: #70c1b3; /* Cor do botão */
+    color: black;
+    font-weight: bold;
+    padding: 5px 10px;
+    font-size: 0.8em;
+    border-radius: 15px;
+    position: absolute; /* Posicionamento absoluto dentro do info-box */
+    bottom: 5px; /* Espaçamento da borda inferior */
+    right: 10px; /* Espaçamento da borda direita */
+    cursor: pointer; /* Efeito de cursor para indicar que é clicável */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.notice-input {
+    padding: 5px 10px;
+    font-size: 0.8em;
+    border-radius: 15px;
+    border: 1px solid #70c1b3;
+    width: calc(100% - 22px); /* Ajusta a largura considerando padding e bordas */
+}
+
+
+@media (max-width: 600px) {
+    .box-title {
+        font-size: 1.2em; /* Smaller font size on mobile devices */
+    }
+
+    .transparent-box {
+        width: 90%; /* Largura total em dispositivos móveis */
+    }
+
+    .box-title {
+        font-size: 1.2em; /* Smaller font size on mobile devices */
+    }
+    .consultas-box {
+        margin: 10px 10px; /* Smaller margin on mobile for better fit */
+        height: 120px; /* Optional: Smaller height on mobile */
+        padding: 5px;
+        padding-bottom: 35px;
+        font-size:0.9em;
+    }
+
+    .todolist-box {
+        margin: 10px 10px; /* Smaller margin on mobile for better fit */
+        height: 300px; /* Optional: Smaller height on mobile */
+    }
+    .newsletter-box {
+        margin: 10px 10px; /* Smaller margin on mobile for better fit */
+        height: 500px; /* Optional: Smaller height on mobile */
+    }
+    .box-date-time {
+        padding-bottom: 3px; /* Menor espaço no móvel */
+    }
+    .box-detail {
+        margin-top: 3px; /* Menor espaço no móvel */
+    }
+    .add-notice-button {
+        padding: 3px 7px;
+        font-size: 0.7em; /* Tamanho menor de fonte para dispositivos móveis */
+    }
+    .todo-item {
+        font-size: 0.8em; /* Tamanho de fonte menor para dispositivos móveis */
+    }
+
+    .newsletter-box {
+        margin: 10px; /* Reduce margin on smaller screens */
+        width: 100%; /* Full width on mobile devices */
+        height: auto; /* Height adjusts to content */
+        padding: 10px; /* Less padding on smaller screens */
+    }
+
+    .newsletter-inner-container {
+        width: 100%; /* Full width inside the newsletter box */
+    }
+
+    .newsletter-label, .newsletter-input, .newsletter-textarea, .newsletter-submit-button {
+        font-size: 0.8em; /* Smaller font size for better readability on mobile */
+    }
+
+    .newsletter-submit-button {
+        padding: 12px; /* Larger button for easier interaction on mobile */
+    }
+}

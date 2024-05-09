@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Page</title>
+    <link rel="stylesheet" href="../css/pagina_contato.css">
+    <script src="../java/pagina_contato.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="../img/logo-tania.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="pagina_home.html">HOME</a></li>
+                <li><a href="pagina_sobre_nos.html">SOBRE NÓS</a></li>
+                <li><a href="pagina_procedimentos.html">PROCEDIMENTOS</a></li>
+                <li><a href="pagina_contato.html"><span style="color: #2DB5B3;">CONTATO</span></a></li>
+                <li><a href="pagina_blog.html">BLOG</a></li>
+            </ul>
+        </nav>
+        <div class="login-button">
+            <a href="pagina_login.html">LOG IN</a>
+        </div>
+    </header>
+
+    <div class="contact-container">
+        <div class="contact-info">
+            <div class="contact-details">
+                <h2>Fale conosco</h2>
+                <p>Nossos canais de atendimentos prontos para te atender!</p>
+                <ul>
+                    <li><strong>WhatsApp:</strong> (11) 99138-0880</li>
+                    <li><strong>Telefone:</strong> (11) 3413-2277</li>
+                    <li><strong>E-mail:</strong> clinica.dra.tania@gmail.com</li>
+                    <button onclick="location.href='pagina_login.html'">AGENDAR CONSULTA</button>
+                </ul>
+                <h2>Estaremos ansiosos para te receber!</h2>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14623.91557330626!2d-46.6593338!3d-23.6050899!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a106e0337d5%3A0xbe234ba174c41187!2sMoema%20Work%20Center!5e0!3m2!1spt-BR!2sbr!4v1715046776623!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="contact-form">
+            <h2>Podemos entrar em contato?</h2>
+            <form action="submit_form.php" method="POST" onsubmit="return resetForm();">
+                <input type="text" name="name" placeholder="Nome" required>
+                <input type="text" name="phone" placeholder="Telefone" required>
+                <input type="email" name="email" placeholder="E-mail" required>
+                <textarea name="message" placeholder="Descreva sua necessidade" required></textarea>
+                <button type="submit">ENVIAR</button>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

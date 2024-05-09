@@ -1,0 +1,111 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    max-width: 100%;
+}
+
+header {
+    background-color: #EDEDED;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo-container img {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #000;
+}
+
+.login-button {
+    padding: 10px 20px;
+    background-color: #68B8CE;
+    border-radius: 5px;
+}
+
+.login-button a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.login-button:hover {
+    background-color: #57a1bc;
+}
+
+.procedimentos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+    margin-top: 100px;
+}
+
+.procedimento {
+    flex-basis: calc(33.333% - 20px); /* subtract any margin/padding */
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.procedimento-text {
+    text-align: center;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.procedimento-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+    max-width: 500px;
+    border-radius: 45px;
+}
+
+.procedimento-img:hover img {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .procedimentos-container {
+        flex-direction: column;
+    }
+    .procedimento {
+        flex-basis: 100%; /* Full width */
+        max-width: 100%;
+    }
+    .procedimento-img img{
+        max-width: 200px;
+        margin: 0 auto;;
+    }
+}

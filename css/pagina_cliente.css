@@ -1,0 +1,458 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('../img/cliente_fundo23.png');
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  font-size: calc(0.10em + 1vw);
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 5px;
+  z-index: 1000;
+}
+
+.logo-container img {
+  width: 10%;
+  max-width: 100px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.logout-container {
+  position:absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+}
+
+.logout-button {
+  background-color: #68B8CE;
+  color: black;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.logout-button:hover {
+  background-color: #57a1bc;
+  cursor: pointer;
+}
+
+.transparent-box {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.transparent-box p {
+  font-size: 1em;
+  color: #000;
+  font-weight: normal;
+  text-transform: none;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.transparent-box .uppercase {
+  font-size: clamp(1em,2.5vw,1.5em);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width:95%;
+  margin: 10px auto 20px;
+  padding: 0 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+  display: block;
+}
+
+.top-left, .top-right {
+  padding-top: 10px;
+}
+
+.top-left {
+  width: 12%;
+  height: 8%;
+  top: 1.92%;
+  left: 1.92%;
+  border-radius: 45px;
+}
+
+.bottom-left {
+  width: 70%;
+  height: 85%;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom-right {
+  width: 25%;
+  height: 40%;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.top-right {
+  width: 25%;
+  height: 40%;
+  top: 15%;
+  right: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  box-sizing: box-sizing;
+}
+
+.box-agendamento {
+  background-color: rgba(82, 146, 178, 0.7); /* The specified blue color */
+  height: 150px; /* Adjust the height as needed */
+  margin: 15px 5px; 
+  border-radius: 15px; /* Rounded corners */
+  padding:5px;
+  font-weight: bold;
+  font-size: 0.9em;
+  position: relative; /* Essencial para posicionar o botão */
+  padding-bottom: 20px;
+}
+
+.box-date-time {
+  display: flex;
+  justify-content: space-between; /* Alinha um item à esquerda e outro à direita */
+  font-weight: bold;
+  margin-bottom: 5px;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.box-date-time::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: black;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0; /* Posiciona a linha abaixo do texto */
+}
+
+.box-detail {
+  margin-top: 5px;
+  margin-bottom: 3px;
+}
+
+.notice-input {
+  padding: 5px 10px;
+  font-size: 0.8em;
+  border-radius: 15px;
+  border: 1px solid #70c1b3;
+  width: calc(100% - 50px); /* Ajusta a largura considerando padding e bordas */
+}
+
+.button-container {
+  position: absolute; /* Ensures positioning inside box-agendamento */
+  bottom: 5px; /* Positions the container at the bottom */
+  left: 10px; /* Maintain consistency in spacing */
+  display: flex; /* Flexbox to align buttons next to each other */
+  gap: 10px; /* Space between buttons */
+}
+
+.remarcar-button, .add-notice-button {
+  background-color: #70c1b3; /* Uniform button color */
+  color: black;
+  padding: 5px 10px;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer; /* Pointer to indicate it's clickable */
+  font-size: 0.8em;
+  position: absolute; /* Absolute positioning within the box */
+  bottom: 5px; /* Aligns buttons at the bottom */
+}
+
+.remarcar-button {
+  left: 10px; /* Positions the remarcar button on the left */
+}
+
+.add-notice-button {
+  right: 10px; /* Positions the observação button on the right */
+}
+
+
+.transparent-box .avisos-texto {
+  font-size: 0.9em;
+  color: #000;
+  margin-top: 10px;
+  text-align: left;
+  padding-left: 10px;
+  display: block;
+  font-weight: bold;
+}
+
+.linha-preta {
+  height: 2px;
+  background-color: black;
+  width: 175%;
+  margin: 5px auto;
+}
+
+#calendar {
+  width: 50%;
+  height: auto;
+  border: 1px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 30px;
+  padding: 10px;
+  margin-top: 70px;
+  margin-left: 30px;
+}
+
+#calendar header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+#calendar header h2 {
+  font-size: 1.0em;
+  color: #333;
+}
+
+#calendar header button {
+  padding: 5px 10px;
+  background-color: #68B8CE;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+#calendar table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+#calendar th, #calendar td {
+  width: 14.28%;
+  text-align: center;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+#calendar th {
+  background-color: #f3f3f3;
+}
+
+#calendar td:hover {
+  background-color: #68B8CE;
+  color: white;
+}
+
+#calendar .selected {
+  background-color: #68B8CE;
+  color: white;
+}
+
+.appointment-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  width: 100%;
+}
+
+.booking-container {
+  display: flex;
+  flex-direction: column;
+  width: 40%; /* Ajuste de largura para o container de reserva */
+}
+
+select {
+  width: 100%;
+  padding: 12px 15px; /* Mais espaço interno para uma aparência 'gordinha' */
+  border-radius: 25px; /* Bordas bem arredondadas */
+  border: none; /* Remove as bordas */
+  background-color: rgba(255, 255, 255, 0.8); /* Fundo levemente transparente */
+  font-size: 1em; /* Tamanho de fonte apropriado */
+  cursor: pointer; /* Indica que o elemento é clicável */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra leve para efeito de elevação */
+}
+
+select:hover {
+  background-color: rgba(255, 255, 255, 0.95); /* Fundo menos transparente ao passar o mouse */
+}
+
+.procedure-selection{
+  margin-top: 50px;
+}
+
+.time-selection{
+  margin-top: 50px;
+}
+
+/* Estilo para o botão Agendar */
+
+.confirm-button{
+  margin-top: 50px;
+}
+button.confirm-button {
+  padding: 10px 20px; /* Espaçamento interno ajustado */
+  background-color: #68B8CE; /* Cor de fundo conforme solicitado */
+  color: white; /* Cor do texto */
+  border: none; /* Sem borda */
+  border-radius: 25px; /* Bordas bem arredondadas */
+  font-weight: bold; /* Texto em negrito */
+  cursor: pointer; /* Indica que o elemento é clicável */
+  transition: background-color 0.3s; /* Transição suave para hover */
+}
+
+button.confirm-button:hover {
+  background-color: #57a1bc; /* Cor de hover ajustada */
+}
+
+
+
+/* Adaptação para responsividade */
+@media (max-width: 768px) {
+  body {
+      font-size: 14px; /* Base font size for better readability on smaller screens */
+  }
+
+  .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative; /* Changed to relative to flow naturally in the document */
+      width: 100%;
+      padding-top: 10px; /* Added padding for spacing */
+      z-index: 1000;
+  }
+
+  .logo-container img {
+      width: 100px; /* Adjusted size to be more suitable for mobile */
+      height: auto;
+      border-radius: 50%;
+  }
+
+  .logout-container {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 1001;
+  }
+
+  .linha-preta {
+    width: 90%;
+    
+  }
+
+  /* Stack welcome box right below the logo */
+  .transparent-box.top-left {
+      order: 1; /* Positioning right after logo */
+      width: 90%; /* Full width to fit content */
+      margin: 0 auto 20px; /* Centering and adding space below */
+      position: relative; /* Allow natural document flow */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+
+  /* Adjusting the position and styling of appointment and calendar boxes */
+  .transparent-box.bottom-left, .transparent-box.bottom-right, .transparent-box.top-right {
+      order: 2; /* Ensuring this content flows after the welcome box */
+      width: 90%; /* Adjust width to fit mobile screens */
+      margin: 10px auto; /* Centering and spacing */
+      position: relative; /* Natural flow */
+  }
+
+  #calendar {
+      margin: 20px 0; /* Space above the calendar */
+      padding: 5px; /* Padding inside the calendar */
+      width: 100%; /* Full width for better interaction */
+      box-sizing: border-box;
+  }
+
+  #calendar header{
+    padding: 0 5px;
+  }
+
+  #calendar header button {
+      font-size: 0.8em; /* Smaller font for the buttons */
+      padding: 5px; /* Adjust padding */
+  }
+
+  #calendar table{
+    margin: 0;
+  }
+
+  .appointment-container {
+      flex-direction: column; /* Stack elements vertically */
+  }
+
+  .booking-container {
+      width: 100%; /* Full width for the form elements */
+  }
+
+  select, .confirm-button {
+      width: 100%; /* Full width for select and button */
+      margin-top: 10px; /* Space above each form element */
+  }
+  
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px; /* Increase base font size for readability */
+  }
+
+  .transparent-box {
+    padding: 10px; /* More padding for better spacing */
+  }
+
+  .logo-container img {
+    width: 80px; /* Adjust logo size */
+  }
+
+  .transparent-box .uppercase {
+    font-size: 1em; /* Adjust font size for very small screens */
+  }
+
+  #calendar th, #calendar td {
+    font-size: 0.7em; /* Reduce font size for very small screens */
+  }
+
+  select, button.confirm-button {
+    padding: 6px 8px; /* Adjust padding for smaller elements */
+    font-size: 0.8em; /* Adjust font size for selections and buttons */
+  }
+}
